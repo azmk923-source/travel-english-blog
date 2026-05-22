@@ -1,48 +1,245 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import FormattedDate from '../components/FormattedDate.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+).slice(0, 6);
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="ja">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			/* ヒーローセクション */
+			.hero {
+				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				color: white;
+				padding: 4rem 1rem;
+				text-align: center;
+			}
+			.hero-inner {
+				max-width: 720px;
+				margin: 0 auto;
+			}
+			.hero h1 {
+				font-size: 2rem;
+				margin: 0 0 1rem;
+				line-height: 1.4;
+			}
+			.hero p {
+				font-size: 1.1rem;
+				opacity: 0.9;
+				margin: 0 0 2rem;
+				line-height: 1.8;
+			}
+			.hero-badge {
+				display: inline-block;
+				background: rgba(255,255,255,0.2);
+				border: 1px solid rgba(255,255,255,0.4);
+				border-radius: 20px;
+				padding: 0.3rem 1rem;
+				font-size: 0.85rem;
+				margin-bottom: 1.5rem;
+			}
+			.hero-btn {
+				display: inline-block;
+				background: white;
+				color: #764ba2;
+				font-weight: bold;
+				padding: 0.8rem 2rem;
+				border-radius: 30px;
+				text-decoration: none;
+				font-size: 1rem;
+				transition: transform 0.2s, box-shadow 0.2s;
+			}
+			.hero-btn:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+			}
+
+			/* コンセプトセクション */
+			.concept {
+				background: #f8f9fa;
+				padding: 3rem 1rem;
+			}
+			.concept-inner {
+				max-width: 720px;
+				margin: 0 auto;
+				text-align: center;
+			}
+			.concept h2 {
+				font-size: 1.4rem;
+				margin-bottom: 2rem;
+				color: rgb(var(--black));
+			}
+			.concept-grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 1.5rem;
+				text-align: center;
+			}
+			.concept-item {
+				background: white;
+				padding: 1.5rem 1rem;
+				border-radius: 12px;
+				box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+			}
+			.concept-icon {
+				font-size: 2rem;
+				margin-bottom: 0.5rem;
+			}
+			.concept-item h3 {
+				font-size: 0.95rem;
+				margin: 0.5rem 0;
+				color: rgb(var(--black));
+			}
+			.concept-item p {
+				font-size: 0.8rem;
+				color: rgb(var(--gray));
+				margin: 0;
+				line-height: 1.6;
+			}
+			@media (max-width: 600px) {
+				.concept-grid {
+					grid-template-columns: 1fr;
+				}
+			}
+
+			/* 記事一覧セクション */
+			.posts-section {
+				padding: 3rem 1rem;
+				max-width: 760px;
+				margin: 0 auto;
+			}
+			.section-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 1.5rem;
+			}
+			.section-header h2 {
+				font-size: 1.3rem;
+				margin: 0;
+				color: rgb(var(--black));
+			}
+			.view-all {
+				font-size: 0.85rem;
+				color: rgb(var(--accent));
+				text-decoration: none;
+			}
+			.view-all:hover {
+				text-decoration: underline;
+			}
+			.posts-list {
+				display: flex;
+				flex-direction: column;
+				gap: 1rem;
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+			.post-card {
+				background: white;
+				border: 1px solid rgb(var(--gray-light));
+				border-radius: 12px;
+				transition: box-shadow 0.2s, transform 0.2s;
+			}
+			.post-card:hover {
+				box-shadow: var(--box-shadow);
+				transform: translateY(-2px);
+			}
+			.post-card a {
+				display: block;
+				padding: 1.2rem 1.5rem;
+				text-decoration: none;
+				color: inherit;
+			}
+			.post-card h3 {
+				margin: 0 0 0.4rem;
+				font-size: 1.05rem;
+				color: rgb(var(--black));
+				line-height: 1.5;
+			}
+			.post-card .desc {
+				font-size: 0.85rem;
+				color: rgb(var(--gray));
+				margin: 0 0 0.5rem;
+				line-height: 1.6;
+			}
+			.post-card .date {
+				font-size: 0.8rem;
+				color: rgb(var(--gray));
+			}
+		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<!-- ヒーローセクション -->
+			<section class="hero">
+				<div class="hero-inner">
+					<div class="hero-badge">✈️ 旅行好き社会人の英語ブログ</div>
+					<h1>アジア旅行をもっと楽しむための<br />英語学習ブログ</h1>
+					<p>
+						台湾・タイ・ベトナム・香港への旅行経験をもとに<br />
+						「旅行で本当に使える英語」を発信しています
+					</p>
+					<a href="/blog" class="hero-btn">記事を読む →</a>
+				</div>
+			</section>
+
+			<!-- コンセプトセクション -->
+			<section class="concept">
+				<div class="concept-inner">
+					<h2>このブログについて</h2>
+					<div class="concept-grid">
+						<div class="concept-item">
+							<div class="concept-icon">🌏</div>
+							<h3>実体験ベース</h3>
+							<p>台湾5〜6回・タイ・ベトナム・香港の旅行経験から本音を発信</p>
+						</div>
+						<div class="concept-item">
+							<div class="concept-icon">📱</div>
+							<h3>アプリ活用法</h3>
+							<p>毎日Duolingoを続けているからこそわかる継続のコツ</p>
+						</div>
+						<div class="concept-item">
+							<div class="concept-icon">💬</div>
+							<h3>使える英語</h3>
+							<p>教科書じゃなく、ホテル・夜市・観光地で実際に使ったフレーズ</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 最新記事セクション -->
+			<section class="posts-section">
+				<div class="section-header">
+					<h2>📝 最新記事</h2>
+					<a href="/blog" class="view-all">すべての記事を見る →</a>
+				</div>
+				<ul class="posts-list">
+					{
+						posts.map((post) => (
+							<li class="post-card">
+								<a href={`/blog/${post.id}/`}>
+									<h3>{post.data.title}</h3>
+									<p class="desc">{post.data.description}</p>
+									<p class="date">
+										<FormattedDate date={post.data.pubDate} />
+									</p>
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</section>
 		</main>
 		<Footer />
 	</body>
