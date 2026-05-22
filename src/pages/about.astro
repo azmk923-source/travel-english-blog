@@ -1,63 +1,164 @@
 ---
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage={AboutHeroImage}
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+<!doctype html>
+<html lang="ja">
+	<head>
+		<BaseHead title="このブログについて | 旅する英語" description="旅行好き社会人kiiが、アジア旅行で使える英語を発信するブログ。台湾5〜6回・タイ・ベトナム・香港への旅行経験と、毎日Duolingoを続けながら学んだことを正直にお伝えします。" />
+		<style>
+			main {
+				max-width: 720px;
+				margin: 0 auto;
+				padding: 2rem 1rem;
+			}
+			.profile-card {
+				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				color: white;
+				border-radius: 16px;
+				padding: 2.5rem 2rem;
+				text-align: center;
+				margin-bottom: 2.5rem;
+			}
+			.avatar {
+				font-size: 4rem;
+				margin-bottom: 0.5rem;
+			}
+			.profile-card h1 {
+				font-size: 1.8rem;
+				margin: 0 0 0.3rem;
+			}
+			.profile-card .tagline {
+				opacity: 0.85;
+				font-size: 0.95rem;
+				margin: 0;
+			}
+			h2 {
+				font-size: 1.2rem;
+				border-left: 4px solid #764ba2;
+				padding-left: 0.8rem;
+				margin: 2rem 0 1rem;
+				color: rgb(var(--black));
+			}
+			p {
+				line-height: 1.9;
+				color: rgb(var(--gray-dark));
+				margin: 0 0 1rem;
+			}
+			.stats {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 1rem;
+				margin: 1.5rem 0;
+			}
+			.stat {
+				background: #f8f9fa;
+				border-radius: 12px;
+				padding: 1.2rem 1rem;
+				text-align: center;
+			}
+			.stat-icon {
+				font-size: 1.8rem;
+				margin-bottom: 0.3rem;
+			}
+			.stat-label {
+				font-size: 0.75rem;
+				color: rgb(var(--gray));
+				margin: 0;
+			}
+			.stat-value {
+				font-size: 0.9rem;
+				font-weight: bold;
+				color: rgb(var(--black));
+				margin: 0.2rem 0 0;
+			}
+			.countries {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.5rem;
+				margin: 1rem 0;
+			}
+			.country-tag {
+				background: #ede9fe;
+				color: #764ba2;
+				border-radius: 20px;
+				padding: 0.3rem 0.9rem;
+				font-size: 0.85rem;
+				font-weight: 500;
+			}
+			@media (max-width: 600px) {
+				.stats {
+					grid-template-columns: 1fr 1fr;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="profile-card">
+				<div class="avatar">✈️</div>
+				<h1>kii</h1>
+				<p class="tagline">旅行好き社会人 × 英語学習中 × 毎日Duolingo</p>
+			</div>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+			<h2>👋 はじめまして</h2>
+			<p>
+				こんにちは、kiiです。年1回のアジア旅行を楽しみに働いている、ごく普通の社会人です。
+			</p>
+			<p>
+				英語は得意ではないけれど、旅先でもっとコミュニケーションを取りたくて毎日Duolingoを続けています。
+				このブログでは、実際の旅行で使った英語フレーズや、英語学習アプリの使い心地を正直にお伝えしています。
+			</p>
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+			<div class="stats">
+				<div class="stat">
+					<div class="stat-icon">🌏</div>
+					<p class="stat-value">5カ国以上</p>
+					<p class="stat-label">アジア旅行経験</p>
+				</div>
+				<div class="stat">
+					<div class="stat-icon">🇹🇼</div>
+					<p class="stat-value">5〜6回</p>
+					<p class="stat-label">台湾訪問回数</p>
+				</div>
+				<div class="stat">
+					<div class="stat-icon">📱</div>
+					<p class="stat-value">毎日継続中</p>
+					<p class="stat-label">Duolingo</p>
+				</div>
+			</div>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+			<h2>🌏 旅行先</h2>
+			<div class="countries">
+				<span class="country-tag">🇹🇼 台湾（台北・台南・高雄）</span>
+				<span class="country-tag">🇹🇭 タイ</span>
+				<span class="country-tag">🇻🇳 ベトナム</span>
+				<span class="country-tag">🇭🇰 香港</span>
+				<span class="country-tag">🇲🇴 マカオ</span>
+			</div>
+			<p>
+				行けて年1回、近場のアジアだけ。でもそれでも十分。毎回の旅行が英語学習のモチベーションになっています。
+				台湾には特に惚れ込んでいて、もう5〜6回通い詰めています😊
+			</p>
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
-</Layout>
+			<h2>📝 このブログについて</h2>
+			<p>
+				「英語苦手でも海外旅行は楽しめる。でも少し話せるともっと楽しい」
+			</p>
+			<p>
+				そんな実体験をもとに、旅行英語・英語学習アプリのレビュー・現地で使えるフレーズを発信しています。
+				教科書的な英語ではなく、実際に使ってみてどうだったかを正直に書くのがモットーです。
+			</p>
+
+			<h2>🏔️ ブログ以外では</h2>
+			<p>
+				月1回、近所の低山に登るのが趣味。山頂から見る景色が好きです。
+				旅行の計画を立てたり、次はどこに行こうかと考えながら地図を見る時間も好きです。
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>
