@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://travel-english-blog.pages.dev/sitemap-index.xml
