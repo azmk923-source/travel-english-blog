@@ -176,6 +176,21 @@ const posts = (await getCollection('blog')).sort(
 				text-decoration: none;
 				color: inherit;
 			}
+			.card-thumb {
+				width: 100%;
+				height: 160px;
+				object-fit: cover;
+				display: block;
+			}
+			.card-thumb-placeholder {
+				width: 100%;
+				height: 160px;
+				background: linear-gradient(135deg, #ede9fe, #ddd6fe);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 2.5rem;
+			}
 			.card-body {
 				padding: 1.4rem 1.5rem;
 				flex: 1;
@@ -294,6 +309,10 @@ const posts = (await getCollection('blog')).sort(
 					{posts.map((post) => (
 						<li class="post-card">
 							<a href={`/blog/${post.id}/`}>
+								{post.data.heroImage
+									? <img class="card-thumb" src={post.data.heroImage} alt={post.data.title} />
+									: <div class="card-thumb-placeholder">✈️</div>
+								}
 								<div class="card-body">
 									<span class="card-tag">旅行英語</span>
 									<h3 class="card-title">{post.data.title}</h3>
