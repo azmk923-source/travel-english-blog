@@ -2,7 +2,7 @@
 title: 'アジア旅行で使える英語フレーズ集【シーン別50選】'
 description: '空港・ホテル・レストラン・タクシー・トラブル対応まで。アジア旅行で本当に使える英語フレーズを50個まとめました。台湾・タイ・ベトナム・香港旅行に対応。'
 pubDate: '2026-05-29'
-heroImage: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200&q=80'
+heroImage: 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1200&q=80'
 ---
 
 「英語のフレーズ、旅行前に確認しておきたい」

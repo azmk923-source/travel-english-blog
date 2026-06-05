@@ -2,7 +2,7 @@
 title: '台湾旅行で英語は通じる？台湾リピーターの私が正直に教えます'
 description: '台北・台南・高雄を実際に歩いた私が、台湾で英語がどこまで通じるかを正直にお伝えします。英語学習アプリのおすすめも紹介！'
 pubDate: '2026-05-22'
-heroImage: 'https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=80'
+heroImage: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?w=1200&q=80'
 ---
 
 台湾旅行を計画しているあなた、こんな不安はありませんか？

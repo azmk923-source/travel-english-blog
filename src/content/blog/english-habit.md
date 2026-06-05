@@ -2,7 +2,7 @@
 title: '英語学習が続かない人へ。社会人が毎日続けるための3つのコツ'
 description: '「英語勉強しなきゃ」と思っても三日坊主になる…そんな社会人へ。Duolingoを毎日続けている私が、忙しくても英語学習を習慣にする3つのコツをお伝えします。'
 pubDate: '2026-05-29'
-heroImage: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1200&q=80'
+heroImage: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200&q=80'
 ---
 
 「英語、勉強しなきゃな…」

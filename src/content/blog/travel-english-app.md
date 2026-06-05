@@ -2,7 +2,7 @@
 title: '旅行英語アプリおすすめ5選【実際に使った正直レビュー】'
 description: '台湾・タイ・ベトナムを旅した私が実際に使った旅行英語アプリを正直にレビュー。スピーク・Duolingo・DMM英会話など、旅行前に英語力を上げたい社会人向けにおすすめを紹介します。'
 pubDate: '2026-05-27'
-heroImage: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&q=80'
+heroImage: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&q=80&fit=crop'
 ---
 
 旅行前に「英語、なんとかしたい…」と思ったことありませんか？
