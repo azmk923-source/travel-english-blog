@@ -22,3 +22,8 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# 運用ファイル（公開リポジトリに含めない）
+.claude/
+x_rotation.txt
+X運用マニュアル.md

@@ -10,12 +10,16 @@ import { Font } from 'astro:assets';
 interface Props {
 	title: string;
 	description: string;
-	image?: ImageMetadata;
+	image?: ImageMetadata | string;
+	type?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = FallbackImage } = Astro.props;
+const { title, description, image = FallbackImage, type = 'website' } = Astro.props;
+
+// heroImageは外部URL（文字列）、フォールバックはローカル画像（.src）の両方に対応
+const ogImage = new URL(typeof image === 'string' ? image : image.src, Astro.url);
 ---
 
 <!-- Global Metadata -->
@@ -44,6 +48,26 @@ const { title, description, image = FallbackImage } = Astro.props;
   gtag('config', 'G-N1G5KDYTC8');
 </script>
 
+<!-- アフィリリンクのクリック計測 -->
+<!-- A8.netリンクのクリックをGA4のカスタムイベントとして送る。記事ごとにどのリンクが押されたかを把握し、収益改善の判断材料にするため -->
+<script is:inline>
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest && event.target.closest('a');
+    if (!link || !link.href) return;
+    // A8.net以外の通常リンクは計測対象外とする
+    if (link.href.indexOf('a8.net') === -1 && link.href.indexOf('a8mat') === -1) return;
+
+    // window.dataLayer経由でGA4へ送信（メインのgtagがモジュールスコープでも確実に届くため）
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ window.dataLayer.push(arguments); }
+    gtag('event', 'affiliate_click', {
+      link_url: link.href,
+      link_text: (link.textContent || '').trim(),
+      page_path: window.location.pathname,
+    });
+  });
+</script>
+
 <Font cssVariable="--font-atkinson" preload />
 
 <!-- Canonical URL -->
@@ -55,15 +79,17 @@ const { title, description, image = FallbackImage } = Astro.props;
 <meta name="description" content={description} />
 
 <!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
+<meta property="og:type" content={type} />
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image.src, Astro.url)} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:site_name" content={SITE_TITLE} />
+<meta property="og:locale" content="ja_JP" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={Astro.url} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image.src, Astro.url)} />
+<meta property="twitter:image" content={ogImage} />

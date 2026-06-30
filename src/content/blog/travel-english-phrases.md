@@ -72,7 +72,7 @@ Wi-Fiのパスワードは？：What's the Wi-Fi password?
 
 ```
 近くにおすすめのレストランは？：Any restaurant recommendations nearby?
-おすすめの観光地は？：What do you recommend sightseeing?
+おすすめの観光地は？：What do you recommend for sightseeing?
 ここへの行き方は？：How do I get to ○○?
 タクシーを呼んでもらえますか：Can you call a taxi for me?
 ```
@@ -202,7 +202,7 @@ Wi-Fiのパスワードは？：What's the Wi-Fi password?
 
 7日間無料で試せるので、旅行前のひと押しに最適です。
 
-👉 [スピークの無料トライアルを試してみる](#)
+👉 [NativeCampの無料体験レッスンを試してみる](https://px.a8.net/svt/ejp?a8mat=4B61WF+71MOHE+35VG+64JTE)
 
 ### レアジョブ英会話で実践練習
 
@@ -234,3 +234,4 @@ Wi-Fiのパスワードは？：What's the Wi-Fi password?
 - [タイ旅行で英語は通じる？バンコク・チェンマイを旅した私が正直に教えます](/blog/thailand-english/)
 - [ベトナム旅行で英語は通じる？ホーチミン・ハノイを旅した私が正直に教えます](/blog/vietnam-english/)
 - [香港旅行で英語は通じる？実際に旅した私が正直に教えます](/blog/hongkong-english/)
+- [韓国旅行で英語は通じる？ソウル・釜山を調べた私が正直に教えます](/blog/korea-english/)

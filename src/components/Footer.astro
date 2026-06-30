@@ -3,17 +3,76 @@ const today = new Date();
 ---
 
 <footer>
-	<p class="copy">&copy; {today.getFullYear()} kii. All rights reserved.</p>
+	<div class="footer-inner">
+		<div class="footer-brand">
+			<span class="footer-logo">✈️ 旅する英語</span>
+			<p class="footer-desc">旅行英語・アジア旅行情報を発信するブログ</p>
+		</div>
+		<nav class="footer-links">
+			<a href="/about/">このブログについて</a>
+			<a href="/privacy-policy/">プライバシーポリシー</a>
+			<a href="/contact/">お問い合わせ</a>
+		</nav>
+	</div>
+	<div class="footer-bottom">
+		<p>&copy; {today.getFullYear()} kii. All rights reserved.</p>
+	</div>
 </footer>
+
 <style>
 	footer {
-		padding: 2em 1em 4em 1em;
-		background: linear-gradient(var(--gray-gradient)) no-repeat;
-		color: rgb(var(--gray));
+		background: #1a1614;
+		color: #a09890;
+		margin-top: 0;
+	}
+	.footer-inner {
+		max-width: 1080px;
+		margin: 0 auto;
+		padding: 3rem 1.5rem 2rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 2rem;
+		flex-wrap: wrap;
+	}
+	.footer-logo {
+		display: block;
+		font-size: 1rem;
+		font-weight: 800;
+		color: #f5f2ed;
+		margin-bottom: 0.5rem;
+		letter-spacing: -0.01em;
+	}
+	.footer-desc {
+		font-size: 0.82rem;
+		color: #6b6560;
+		margin: 0;
+		line-height: 1.6;
+	}
+	.footer-links {
+		display: flex;
+		flex-direction: column;
+		gap: 0.6rem;
+	}
+	.footer-links a {
+		color: #6b6560;
+		font-size: 0.82rem;
+		text-decoration: none;
+		transition: color 0.2s;
+	}
+	.footer-links a:hover { color: #f5f2ed; }
+	.footer-bottom {
+		border-top: 1px solid #2a2420;
+		padding: 1.2rem 1.5rem;
 		text-align: center;
 	}
-	.copy {
+	.footer-bottom p {
 		margin: 0;
-		font-size: 0.9rem;
+		font-size: 0.78rem;
+		color: #4a4440;
+	}
+	@media (max-width: 600px) {
+		.footer-inner { flex-direction: column; }
+		.footer-links { flex-direction: row; flex-wrap: wrap; gap: 1rem; }
 	}
 </style>

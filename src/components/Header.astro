@@ -4,44 +4,73 @@ import HeaderLink from './HeaderLink.astro';
 ---
 
 <header>
-	<nav>
-		<h2><a href="/">✈️ 旅する英語</a></h2>
-		<div class="internal-links">
+	<div class="header-inner">
+		<a href="/" class="logo">
+			<span class="logo-icon">✈️</span>
+			<span class="logo-text">旅する英語</span>
+		</a>
+		<nav>
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/blog">記事一覧</HeaderLink>
 			<HeaderLink href="/about">About</HeaderLink>
-		</div>
-	</nav>
+		</nav>
+	</div>
 </header>
+
 <style>
 	header {
-		margin: 0;
-		padding: 0 1em;
-		background: white;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+		position: sticky;
+		top: 0;
+		z-index: 100;
+		background: rgba(250, 249, 246, 0.85);
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px);
+		border-bottom: 1px solid var(--border);
 	}
-	h2 {
-		margin: 0;
-		font-size: 1em;
-	}
-
-	h2 a,
-	h2 a.active {
-		text-decoration: none;
-	}
-	nav {
+	.header-inner {
+		max-width: 1080px;
+		margin: 0 auto;
+		padding: 0 1.5rem;
+		height: 60px;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 	}
-	nav a {
-		padding: 1em 0.5em;
-		color: var(--black);
-		border-bottom: 4px solid transparent;
+	.logo {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
 		text-decoration: none;
+		color: var(--text);
+		font-weight: 800;
+		font-size: 1rem;
+		letter-spacing: -0.01em;
+		transition: opacity 0.2s;
 	}
-	nav a.active {
+	.logo:hover { opacity: 0.75; color: var(--text); }
+	.logo-icon { font-size: 1.1rem; }
+	.logo-text { color: var(--text); }
+	nav {
+		display: flex;
+		align-items: center;
+		gap: 0.25rem;
+	}
+	nav :global(a) {
+		padding: 0.4rem 0.8rem;
+		color: var(--text-muted);
+		font-size: 0.88rem;
+		font-weight: 600;
+		border-radius: 6px;
 		text-decoration: none;
-		border-bottom-color: var(--accent);
+		transition: color 0.2s, background 0.2s;
+		letter-spacing: 0.01em;
+	}
+	nav :global(a:hover) {
+		color: var(--text);
+		background: var(--border);
+	}
+	nav :global(a.active) {
+		color: var(--accent);
+		background: var(--accent-light);
 	}
 </style>

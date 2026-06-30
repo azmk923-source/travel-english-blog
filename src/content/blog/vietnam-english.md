@@ -146,7 +146,7 @@ heroImage: 'https://images.unsplash.com/photo-1528127269322-539801943592?w=1200&
 
 スピークはAIが相手なので、間違いを恐れずに何度も練習できます。ベトナムで使うシーン（ホテル・市場・観光地）を想定した会話練習ができるのが魅力です。
 
-👉 [スピークの無料トライアルを試してみる](#)
+👉 [NativeCampの無料体験レッスンを試してみる](https://px.a8.net/svt/ejp?a8mat=4B61WF+71MOHE+35VG+64JTE)
 
 ### もっと実践的に鍛えたいならレアジョブ英会話
 
@@ -175,3 +175,4 @@ heroImage: 'https://images.unsplash.com/photo-1528127269322-539801943592?w=1200&
 - [アジア旅行で使える英語フレーズ集【シーン別50選】](/blog/travel-english-phrases/)
 - [旅行英語アプリおすすめ5選【実際に使った正直レビュー】](/blog/travel-english-app/)
 - [タイ旅行で英語は通じる？バンコク・チェンマイを旅した私が正直に教えます](/blog/thailand-english/)
+- [海外旅行のネット環境どうする？WiFiレンタル・eSIM・SIMを初心者向けに比較](/blog/overseas-internet/)

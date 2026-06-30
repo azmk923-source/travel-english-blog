@@ -9,6 +9,8 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 ).slice(0, 6);
+
+const [featured, ...rest] = posts;
 ---
 
 <!doctype html>
@@ -16,157 +18,217 @@ const posts = (await getCollection('blog')).sort(
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
-			/* ヒーロー */
+			/* Hero */
 			.hero {
-				background: #0f0f0f;
-				color: #fff;
-				padding: 5rem 1.5rem;
+				background: linear-gradient(135deg, #1a1614 0%, #2d1f1a 100%);
+				padding: 6rem 1.5rem;
+				position: relative;
+				overflow: hidden;
+			}
+			.hero::before {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background: radial-gradient(ellipse at 70% 50%, rgba(194, 65, 12, 0.15) 0%, transparent 60%);
+				pointer-events: none;
 			}
 			.hero-inner {
 				max-width: 760px;
 				margin: 0 auto;
+				position: relative;
 			}
-			.hero-label {
+			.hero-eyebrow {
 				display: inline-block;
 				font-size: 0.7rem;
 				font-weight: 700;
-				letter-spacing: 0.2em;
+				letter-spacing: 0.18em;
 				text-transform: uppercase;
-				color: #a78bfa;
-				border: 1px solid #a78bfa;
-				padding: 0.25rem 0.8rem;
+				color: var(--accent);
+				border: 1px solid rgba(194,65,12,0.5);
+				padding: 0.25rem 0.9rem;
 				border-radius: 20px;
-				margin-bottom: 1.5rem;
+				margin-bottom: 1.8rem;
 			}
 			.hero h1 {
-				font-size: 2.4rem;
+				font-size: clamp(2rem, 5vw, 3rem);
 				font-weight: 900;
-				line-height: 1.3;
+				line-height: 1.25;
+				color: #f5f2ed;
 				margin: 0 0 1.2rem;
-				color: #fff;
+				letter-spacing: -0.03em;
 			}
-			.hero h1 span {
-				color: #a78bfa;
+			.hero h1 em {
+				font-style: normal;
+				color: var(--accent);
 			}
-			.hero p {
+			.hero-sub {
 				font-size: 1rem;
-				color: #9ca3af;
-				margin: 0 0 2rem;
+				color: #8a7e78;
+				margin: 0 0 2.5rem;
 				line-height: 1.8;
+				max-width: 520px;
 			}
 			.hero-btn {
-				display: inline-block;
-				background: #6d28d9;
+				display: inline-flex;
+				align-items: center;
+				gap: 0.4rem;
+				background: var(--accent);
 				color: #fff;
 				font-weight: 700;
 				font-size: 0.9rem;
 				padding: 0.8rem 2rem;
 				border-radius: 8px;
 				text-decoration: none;
-				letter-spacing: 0.03em;
+				letter-spacing: 0.02em;
 				transition: background 0.2s, transform 0.2s;
 			}
 			.hero-btn:hover {
-				background: #5b21b6;
+				background: var(--accent-hover);
+				color: #fff;
 				transform: translateY(-2px);
 			}
 
-			/* コンセプト */
-			.concept {
-				background: #f9fafb;
-				padding: 4rem 1.5rem;
-				border-bottom: 1px solid #e5e7eb;
-			}
-			.concept-inner {
-				max-width: 900px;
+			/* Featured */
+			.featured-section {
+				max-width: 1080px;
 				margin: 0 auto;
+				padding: 4rem 1.5rem 2rem;
 			}
-			.section-header {
-				margin-bottom: 2.5rem;
-			}
-			.section-header .en {
-				display: block;
-				font-size: 0.7rem;
-				font-weight: 700;
-				letter-spacing: 0.2em;
-				text-transform: uppercase;
-				color: #6d28d9;
-				margin-bottom: 0.3rem;
-			}
-			.section-header h2 {
-				font-size: 1.5rem;
-				font-weight: 800;
-				color: #111827;
-				margin: 0;
-			}
-			.concept-grid {
-				display: grid;
-				grid-template-columns: repeat(3, 1fr);
-				gap: 1.2rem;
-			}
-			.concept-item {
-				background: #fff;
-				border: 1px solid #e5e7eb;
-				border-radius: 12px;
-				padding: 1.5rem;
-			}
-			.concept-icon {
-				font-size: 1.8rem;
-				margin-bottom: 0.6rem;
-			}
-			.concept-item h3 {
-				font-size: 0.9rem;
-				font-weight: 700;
-				margin: 0 0 0.4rem;
-				color: #111827;
-			}
-			.concept-item p {
-				font-size: 0.8rem;
-				color: #6b7280;
-				margin: 0;
-				line-height: 1.7;
-			}
-
-			/* 記事セクション */
-			.articles {
-				max-width: 1000px;
-				margin: 0 auto;
-				padding: 4rem 1.5rem;
-			}
-			.section-actions {
+			.section-label {
 				display: flex;
-				justify-content: space-between;
-				align-items: flex-end;
-				margin-bottom: 2rem;
+				align-items: center;
+				gap: 0.6rem;
+				margin-bottom: 1.5rem;
 			}
-			.view-all {
-				font-size: 0.8rem;
+			.section-label .en {
+				font-size: 0.68rem;
 				font-weight: 700;
-				color: #6d28d9;
-				text-decoration: none;
-				letter-spacing: 0.05em;
+				letter-spacing: 0.18em;
 				text-transform: uppercase;
+				color: var(--accent);
 			}
-			.view-all:hover { text-decoration: underline; }
+			.section-label::after {
+				content: '';
+				flex: 1;
+				height: 1px;
+				background: var(--border);
+			}
+			.featured-card {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 0;
+				background: var(--surface);
+				border: 1px solid var(--border);
+				border-radius: var(--radius);
+				overflow: hidden;
+				box-shadow: var(--shadow-sm);
+				transition: box-shadow 0.25s, transform 0.25s;
+				text-decoration: none;
+				color: inherit;
+			}
+			.featured-card:hover {
+				box-shadow: var(--shadow-hover);
+				transform: translateY(-3px);
+				color: inherit;
+			}
+			.featured-thumb {
+				width: 100%;
+				height: 100%;
+				min-height: 260px;
+				object-fit: cover;
+				display: block;
+				border-radius: 0;
+			}
+			.featured-placeholder {
+				min-height: 260px;
+				background: linear-gradient(135deg, #fff4ed, #ffe8d5);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 4rem;
+			}
+			.featured-body {
+				padding: 2.5rem;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+			.card-tag {
+				display: inline-block;
+				background: var(--accent-light);
+				color: var(--accent);
+				font-size: 0.68rem;
+				font-weight: 700;
+				letter-spacing: 0.06em;
+				text-transform: uppercase;
+				padding: 0.2rem 0.7rem;
+				border-radius: 20px;
+				margin-bottom: 1rem;
+				width: fit-content;
+			}
+			.featured-body h2 {
+				font-size: 1.4rem;
+				font-weight: 800;
+				line-height: 1.4;
+				margin: 0 0 0.8rem;
+				letter-spacing: -0.02em;
+			}
+			.featured-desc {
+				font-size: 0.88rem;
+				color: var(--text-muted);
+				line-height: 1.7;
+				margin: 0 0 1.5rem;
+				display: -webkit-box;
+				-webkit-line-clamp: 3;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+			}
+			.featured-meta {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				border-top: 1px solid var(--border);
+				padding-top: 1rem;
+			}
+			.meta-date {
+				font-size: 0.75rem;
+				color: var(--text-muted);
+			}
+			.read-link {
+				font-size: 0.82rem;
+				font-weight: 700;
+				color: var(--accent);
+				display: flex;
+				align-items: center;
+				gap: 0.3rem;
+				transition: gap 0.2s;
+			}
+			.featured-card:hover .read-link { gap: 0.6rem; }
 
-			/* グリッド */
+			/* Grid */
+			.articles-section {
+				max-width: 1080px;
+				margin: 0 auto;
+				padding: 2rem 1.5rem 5rem;
+			}
 			.posts-grid {
 				display: grid;
-				grid-template-columns: repeat(2, 1fr);
+				grid-template-columns: repeat(3, 1fr);
 				gap: 1.2rem;
 				list-style: none;
 				padding: 0;
 				margin: 0;
 			}
 			.post-card {
-				background: #fff;
-				border: 1px solid #e5e7eb;
-				border-radius: 16px;
+				background: var(--surface);
+				border: 1px solid var(--border);
+				border-radius: var(--radius);
 				overflow: hidden;
 				transition: box-shadow 0.25s, transform 0.25s;
+				box-shadow: var(--shadow-sm);
 			}
 			.post-card:hover {
-				box-shadow: 0 8px 32px rgba(109,40,217,0.1);
+				box-shadow: var(--shadow-hover);
 				transform: translateY(-3px);
 			}
 			.post-card a {
@@ -178,50 +240,42 @@ const posts = (await getCollection('blog')).sort(
 			}
 			.card-thumb {
 				width: 100%;
-				height: 160px;
+				height: 150px;
 				object-fit: cover;
 				display: block;
 			}
-			.card-thumb-placeholder {
+			.card-placeholder {
 				width: 100%;
-				height: 160px;
-				background: linear-gradient(135deg, #ede9fe, #ddd6fe);
+				height: 150px;
+				background: linear-gradient(135deg, #fff4ed, #ffe8d5);
 				display: flex;
 				align-items: center;
 				justify-content: center;
 				font-size: 2.5rem;
 			}
 			.card-body {
-				padding: 1.4rem 1.5rem;
+				padding: 1.2rem 1.4rem;
 				flex: 1;
 				display: flex;
 				flex-direction: column;
 			}
-			.card-tag {
-				display: inline-block;
-				background: #ede9fe;
-				color: #6d28d9;
-				font-size: 0.68rem;
-				font-weight: 700;
-				letter-spacing: 0.05em;
-				padding: 0.2rem 0.7rem;
-				border-radius: 20px;
-				margin-bottom: 0.8rem;
-				width: fit-content;
-			}
 			.card-title {
-				font-size: 0.95rem;
+				font-size: 0.92rem;
 				font-weight: 700;
-				color: #111827;
+				color: var(--text);
 				line-height: 1.5;
-				margin: 0 0 0.6rem;
+				margin: 0 0 0.5rem;
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
 			}
 			.card-desc {
-				font-size: 0.8rem;
-				color: #6b7280;
-				line-height: 1.7;
-				margin: 0 0 1rem;
-				flex: 1;
+				font-size: 0.78rem;
+				color: var(--text-muted);
+				line-height: 1.6;
+				margin: 0 0 auto;
+				padding-bottom: 0.8rem;
 				display: -webkit-box;
 				-webkit-line-clamp: 2;
 				-webkit-box-orient: vertical;
@@ -231,25 +285,51 @@ const posts = (await getCollection('blog')).sort(
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
-				border-top: 1px solid #e5e7eb;
-				padding-top: 0.8rem;
+				border-top: 1px solid var(--border);
+				padding-top: 0.7rem;
+				margin-top: 0.7rem;
 			}
 			.card-date {
-				font-size: 0.72rem;
-				color: #9ca3af;
+				font-size: 0.7rem;
+				color: var(--text-muted);
 			}
 			.card-arrow {
-				font-size: 0.8rem;
-				color: #6d28d9;
+				font-size: 0.78rem;
+				color: var(--accent);
 				font-weight: 700;
 				transition: transform 0.2s;
 			}
 			.post-card:hover .card-arrow { transform: translateX(4px); }
 
-			@media (max-width: 640px) {
-				.hero h1 { font-size: 1.7rem; }
-				.concept-grid { grid-template-columns: 1fr; }
+			.view-all-wrap {
+				text-align: center;
+				margin-top: 2.5rem;
+			}
+			.btn-outline {
+				display: inline-block;
+				border: 2px solid var(--accent);
+				color: var(--accent);
+				font-weight: 700;
+				font-size: 0.88rem;
+				padding: 0.7rem 2rem;
+				border-radius: 8px;
+				text-decoration: none;
+				transition: background 0.2s, color 0.2s;
+				letter-spacing: 0.02em;
+			}
+			.btn-outline:hover {
+				background: var(--accent);
+				color: #fff;
+			}
+
+			@media (max-width: 768px) {
+				.featured-card { grid-template-columns: 1fr; }
+				.featured-placeholder { min-height: 200px; }
+				.featured-body { padding: 1.5rem; }
 				.posts-grid { grid-template-columns: 1fr; }
+			}
+			@media (min-width: 769px) and (max-width: 960px) {
+				.posts-grid { grid-template-columns: repeat(2, 1fr); }
 			}
 		</style>
 	</head>
@@ -259,9 +339,9 @@ const posts = (await getCollection('blog')).sort(
 			<!-- Hero -->
 			<section class="hero">
 				<div class="hero-inner">
-					<span class="hero-label">Travel English Blog</span>
-					<h1>アジア旅行を<span>もっと楽しむ</span><br />英語学習ブログ</h1>
-					<p>
+					<p class="hero-eyebrow">Travel English Blog</p>
+					<h1>アジア旅行を<br><em>もっと楽しむ</em><br>英語学習ブログ</h1>
+					<p class="hero-sub">
 						台湾・タイ・ベトナム・香港への旅行経験をもとに<br />
 						「旅行で本当に使える英語」を発信しています
 					</p>
@@ -269,66 +349,62 @@ const posts = (await getCollection('blog')).sort(
 				</div>
 			</section>
 
-			<!-- Concept -->
-			<section class="concept">
-				<div class="concept-inner">
-					<div class="section-header">
-						<span class="en">About</span>
-						<h2>このブログについて</h2>
+			<!-- Featured Article -->
+			{featured && (
+				<section class="featured-section">
+					<div class="section-label">
+						<span class="en">Featured</span>
 					</div>
-					<div class="concept-grid">
-						<div class="concept-item">
-							<div class="concept-icon">🌏</div>
-							<h3>実体験ベース</h3>
-							<p>台湾・タイ・ベトナム・香港への旅行経験から本音を発信</p>
+					<a class="featured-card" href={`/blog/${featured.id}/`}>
+						{featured.data.heroImage
+							? <img class="featured-thumb" src={featured.data.heroImage} alt={featured.data.title} />
+							: <div class="featured-placeholder">✈️</div>
+						}
+						<div class="featured-body">
+							<span class="card-tag">旅行英語</span>
+							<h2>{featured.data.title}</h2>
+							<p class="featured-desc">{featured.data.description}</p>
+							<div class="featured-meta">
+								<span class="meta-date"><FormattedDate date={featured.data.pubDate} /></span>
+								<span class="read-link">Read more →</span>
+							</div>
 						</div>
-						<div class="concept-item">
-							<div class="concept-icon">📱</div>
-							<h3>アプリ活用法</h3>
-							<p>毎日Duolingoを続けているからこそわかる継続のコツ</p>
-						</div>
-						<div class="concept-item">
-							<div class="concept-icon">💬</div>
-							<h3>使える英語</h3>
-							<p>ホテル・夜市・観光地で実際に使ったフレーズを紹介</p>
-						</div>
-					</div>
-				</div>
-			</section>
+					</a>
+				</section>
+			)}
 
-			<!-- Articles -->
-			<section class="articles">
-				<div class="section-actions">
-					<div class="section-header" style="margin-bottom:0">
+			<!-- Articles Grid -->
+			{rest.length > 0 && (
+				<section class="articles-section">
+					<div class="section-label">
 						<span class="en">Latest Articles</span>
-						<h2>最新記事</h2>
 					</div>
-					<a href="/blog" class="view-all">View All →</a>
-				</div>
-				<ul class="posts-grid">
-					{posts.map((post) => (
-						<li class="post-card">
-							<a href={`/blog/${post.id}/`}>
-								{post.data.heroImage
-									? <img class="card-thumb" src={post.data.heroImage} alt={post.data.title} />
-									: <div class="card-thumb-placeholder">✈️</div>
-								}
-								<div class="card-body">
-									<span class="card-tag">旅行英語</span>
-									<h3 class="card-title">{post.data.title}</h3>
-									<p class="card-desc">{post.data.description}</p>
-									<div class="card-footer">
-										<span class="card-date">
-											<FormattedDate date={post.data.pubDate} />
-										</span>
-										<span class="card-arrow">Read →</span>
+					<ul class="posts-grid">
+						{rest.map((post) => (
+							<li class="post-card">
+								<a href={`/blog/${post.id}/`}>
+									{post.data.heroImage
+										? <img class="card-thumb" src={post.data.heroImage} alt={post.data.title} />
+										: <div class="card-placeholder">✈️</div>
+									}
+									<div class="card-body">
+										<span class="card-tag">旅行英語</span>
+										<h3 class="card-title">{post.data.title}</h3>
+										<p class="card-desc">{post.data.description}</p>
+										<div class="card-footer">
+											<span class="card-date"><FormattedDate date={post.data.pubDate} /></span>
+											<span class="card-arrow">→</span>
+										</div>
 									</div>
-								</div>
-							</a>
-						</li>
-					))}
-				</ul>
-			</section>
+								</a>
+							</li>
+						))}
+					</ul>
+					<div class="view-all-wrap">
+						<a href="/blog" class="btn-outline">記事をすべて見る →</a>
+					</div>
+				</section>
+			)}
 		</main>
 		<Footer />
 	</body>
