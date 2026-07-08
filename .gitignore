@@ -27,3 +27,9 @@ pnpm-debug.log*
 .claude/
 x_rotation.txt
 X運用マニュアル.md
+# 引き継ぎ文書（機密：アフィリID・GA4 ID・ペルソナ等を含む）
+HANDOFF.md
+HANDOFF-archive-*.md
+
+# 未公開の下書き記事
+drafts/

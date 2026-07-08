@@ -185,6 +185,7 @@ Naverが開発した韓国語↔日本語・英語の翻訳アプリ。Googleよ
 
 ## 関連記事
 
+- [旅行のためのオンライン英会話おすすめ比較【初心者向けに正直に選んだ】](/blog/online-english-comparison/)
 - [アジア旅行で使える英語フレーズ集【シーン別50選】](/blog/travel-english-phrases/)
 - [旅行英語アプリおすすめ5選【実際に使った正直レビュー】](/blog/travel-english-app/)
 - [台湾旅行で英語は通じる？台湾リピーターの私が正直に教えます](/blog/taiwan-english/)
