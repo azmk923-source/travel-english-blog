@@ -123,6 +123,8 @@ heroImage: 'https://images.unsplash.com/photo-1601621915196-2621bfb0cd6e?w=1200&
 
 Naverが開発した韓国語↔日本語・英語の翻訳アプリ。GoogleよりPapagoの方が韓国語は精度が高いと言われています。カメラ翻訳機能でメニューも即解読できます。
 
+ちなみにKakaoTもPapagoも**ネット接続が前提**です。韓国はGoogleマップがほぼ使えない国なので、ネット回線の準備はとくに大事。詳しくは[韓国旅行のWiFi・eSIMはどれがいい？](/blog/korea-wifi-esim/)にまとめました。
+
 ### ③ 数字と指差し
 
 市場での値段交渉や屋台での注文は、数字の指差しで十分伝わります。電卓アプリを見せ合うのも有効。
@@ -187,6 +189,7 @@ Naverが開発した韓国語↔日本語・英語の翻訳アプリ。Googleよ
 
 ## 関連記事
 
+- [韓国旅行のWiFi・eSIMはどれがいい？Googleマップが使えない国の正直な選び方](/blog/korea-wifi-esim/)
 - [旅行のためのオンライン英会話おすすめ比較【初心者向けに正直に選んだ】](/blog/online-english-comparison/)
 - [アジア旅行で使える英語フレーズ集【シーン別50選】](/blog/travel-english-phrases/)
 - [旅行英語アプリおすすめ5選【実際に使った正直レビュー】](/blog/travel-english-app/)
