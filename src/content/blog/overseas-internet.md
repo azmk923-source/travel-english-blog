@@ -139,7 +139,9 @@ eSIMは、**SIMカードを差し替えずにスマホの中で回線を切り�
 
 ## 関連記事
 
+- [海外航空券を安く取る7つのコツ【アジア旅行リピーターの正直な予約手順】](/blog/overseas-flight-tips/)
 - [台湾旅行のWiFi・eSIMはどれがいい？台湾リピーターが正直に比較](/blog/taiwan-wifi-esim/)
+- [韓国旅行のWiFi・eSIMはどれがいい？Googleマップが使えない国の正直な選び方](/blog/korea-wifi-esim/)
 - [旅行のためのオンライン英会話おすすめ比較【初心者向けに正直に選んだ】](/blog/online-english-comparison/)
 - [旅行英語アプリおすすめ5選【実際に使った正直レビュー】](/blog/travel-english-app/)
 - [アジア旅行で使える英語フレーズ集【シーン別50選】](/blog/travel-english-phrases/)
