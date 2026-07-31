@@ -182,6 +182,7 @@ RPGゲーム形式で英単語を学べるアプリです。
 
 ## 関連記事
 
+- [AI英会話スピーク(Speak)の正直レビュー【旅行英語に効く使い方と無料トライアルの始め方】](/blog/speak-app-review/)
 - [旅行のためのオンライン英会話おすすめ比較【初心者向けに正直に選んだ】](/blog/online-english-comparison/)
 - [アジア旅行で使える英語フレーズ集【シーン別50選】](/blog/travel-english-phrases/)
 - [英語学習が続かない人へ。社会人が毎日続けるための3つのコツ](/blog/english-habit/)
