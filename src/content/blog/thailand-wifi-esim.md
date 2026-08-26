@@ -216,5 +216,6 @@ Grabはカード払いにできますが、**屋台やローカル食堂は現�
 - [海外旅行のネット環境どうする？WiFiレンタル・eSIM・SIMを初心者向けに比較](/blog/overseas-internet/)
 - [韓国旅行のWiFi・eSIMはどれがいい？Googleマップが使えない国の正直な選び方](/blog/korea-wifi-esim/)
 - [台湾旅行のWiFi・eSIMはどれがいい？台湾リピーターが正直に比較](/blog/taiwan-wifi-esim/)
+- [ベトナム旅行のWiFi・eSIMはどれがいい？ネットがないと「値段」で損する国の選び方](/blog/vietnam-wifi-esim/)
 - [旅行のためのオンライン英会話おすすめ比較【初心者向けに正直に選んだ】](/blog/online-english-comparison/)
 - [アジア旅行で使える英語フレーズ集【シーン別50選】](/blog/travel-english-phrases/)

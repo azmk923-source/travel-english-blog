@@ -84,6 +84,8 @@ heroImage: 'https://images.unsplash.com/photo-1528127269322-539801943592?w=1200&
 
 ベトナムでもGrabアプリが超便利です。アプリ上で目的地を入力できるので、言葉の壁ほぼゼロ。
 
+ただしGrabはネット接続が前提のアプリなので、現地のネット回線の準備もセットで考えてください。詳しくは[ベトナム旅行のWiFi・eSIMはどれがいい？](/blog/vietnam-wifi-esim/)にまとめました。
+
 タクシーを使う場合は：
 ```
 メーターで行って：By meter, please.
@@ -176,3 +178,4 @@ NativeCampはレッスン回数無制限なので、間違いを恐れずに何�
 - [旅行英語アプリおすすめ5選【実際に使った正直レビュー】](/blog/travel-english-app/)
 - [タイ旅行で英語は通じる？バンコク・チェンマイを旅した私が正直に教えます](/blog/thailand-english/)
 - [海外旅行のネット環境どうする？WiFiレンタル・eSIM・SIMを初心者向けに比較](/blog/overseas-internet/)
+- [ベトナム旅行のWiFi・eSIMはどれがいい？ネットがないと「値段」で損する国の選び方](/blog/vietnam-wifi-esim/)
