@@ -43,17 +43,17 @@ Set bs = wb.Worksheets(SHEET_BODY)
 '--- 設定読み込み ---
 Dim limitHours, startTime, amLimit, subjTpl, ccAll, clearIn
 limitHours = ConfNum(cf, "上限時間", 13)
-startTime  = ConfTime(cf, "送信可能開始時刻", TimeSerial(9, 0, 0))
-amLimit    = ConfTime(cf, "午前打刻とみなす上限", TimeSerial(12, 0, 0))
+startTime  = ConfTime(cf, "送信可能開始時刻", 9 / 24)
+amLimit    = ConfTime(cf, "午前打刻とみなす上限", 12 / 24)
 subjTpl    = ConfStr(cf, "件名", "【勤務時間】13時間到達まで残り{remain}です")
 clearIn    = (UCase(Trim(ConfStr(cf, "送信後に打刻をクリア", "ON"))) = "ON")
 ccAll      = ConfStr(cf, "CC", "")
 
 '--- 9時前は実行しない ---
-If TimeValue(Now) < startTime Then
+If CDbl(TimeValue(Now)) < CDbl(startTime) Then
   CloseAll xl, wb
   MsgBox "送信可能時刻（" & FmtHM(startTime) & "）より前のため送信しません。" & vbCrLf & _
-         "現在時刻: " & FmtHM(TimeValue(Now)), vbExclamation, "勤怠メール"
+         "現在時刻: " & FmtHM(CDbl(TimeValue(Now))), vbExclamation, "勤怠メール"
   WScript.Quit 0
 End If
 
@@ -101,7 +101,7 @@ For r = 2 To lastRow
         logTxt = logTxt & "  ・" & nm & " : 午後出勤のため対象外" & vbCrLf
       Else
         limT = inT + CDbl(limitHours) / 24
-        remainMin = CLng((limT - TimeValue(Now)) * 24 * 60)
+        remainMin = CLng((limT - CDbl(TimeValue(Now))) * 24 * 60)
 
         Dim subj, body, remainTxt, inTxt, limTxt
         If remainMin <= 0 Then
