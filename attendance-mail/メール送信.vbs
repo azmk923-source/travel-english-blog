@@ -103,7 +103,7 @@ For r = 2 To lastRow
         limT = inT + CDbl(limitHours) / 24
         remainMin = CLng((limT - TimeValue(Now)) * 24 * 60)
 
-        Dim subj, body, remainTxt
+        Dim subj, body, remainTxt, inTxt, limTxt
         If remainMin <= 0 Then
           remainTxt = "0ŽžŠÔ0•ªi" & HM(Abs(remainMin)) & "’´‰ßj"
           skipOver = skipOver + 1
@@ -111,8 +111,10 @@ For r = 2 To lastRow
           remainTxt = HM(remainMin)
         End If
 
-        subj = Repl(subjTpl, nm, inT, limT, remainTxt, limitHours)
-        body = Repl(bodyTpl, nm, inT, limT, remainTxt, limitHours)
+        inTxt = FmtHM(inT)
+        limTxt = FmtHM(limT)
+        subj = Repl(subjTpl, nm, inTxt, limTxt, remainTxt, limitHours)
+        body = Repl(bodyTpl, nm, inTxt, limTxt, remainTxt, limitHours)
 
         On Error Resume Next
         Dim mail
@@ -175,8 +177,8 @@ End Function
 Function Repl(tpl, nm, inT, limT, remainTxt, lh)
   Dim s : s = tpl
   s = Replace(s, "{name}", nm)
-  s = Replace(s, "{in}", FmtHM(inT))
-  s = Replace(s, "{limit}", FmtHM(limT))
+  s = Replace(s, "{in}", inT)
+  s = Replace(s, "{limit}", limT)
   s = Replace(s, "{remain}", remainTxt)
   s = Replace(s, "{hours}", CStr(lh))
   s = Replace(s, "{date}", Year(Date) & "/" & Right("0" & Month(Date), 2) & "/" & Right("0" & Day(Date), 2))
