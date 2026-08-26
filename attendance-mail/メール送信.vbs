@@ -156,8 +156,11 @@ Function HM(totalMin)
 End Function
 
 Function FmtHM(t)
-  Dim m : m = Int(CDbl(t) * 1440 + 0.5)
-  FmtHM = Right("0" & (m \ 60), 2) & ":" & Right("0" & (m Mod 60), 2)
+  Dim m, hh, mm
+  m = Int(CDbl(t) * 1440 + 0.5)
+  hh = m \ 60
+  mm = m Mod 60
+  FmtHM = Right("0" & hh, 2) & ":" & Right("0" & mm, 2)
 End Function
 
 ' セル値（時刻 or シリアル値）→ 1日を1とする小数
