@@ -100,8 +100,8 @@ For r = 2 To lastRow
         skipPm = skipPm + 1
         logTxt = logTxt & "  ÅE" & nm & " : åﬂå„èoãŒÇÃÇΩÇﬂëŒè€äO" & vbCrLf
       Else
-        limT = inT + CDbl(limitHours) / 24#
-        remainMin = CLng((limT - TimeValue(Now)) * 24# * 60#)
+        limT = inT + CDbl(limitHours) / 24
+        remainMin = CLng((limT - TimeValue(Now)) * 24 * 60)
 
         Dim subj, body, remainTxt
         If remainMin <= 0 Then
@@ -189,9 +189,15 @@ Function ConfRow(cf, key)
 End Function
 
 Function ConfStr(cf, key, dflt)
-  Dim i : i = ConfRow(cf, key)
-  If i = 0 Then ConfStr = dflt Else ConfStr = CStr(cf.Cells(i, 2).Value)
-  If Trim(ConfStr) = "" And key <> "CC" Then ConfStr = dflt
+  Dim i, v
+  i = ConfRow(cf, key)
+  If i = 0 Then
+    v = dflt
+  Else
+    v = CStr(cf.Cells(i, 2).Value)
+    If Trim(v) = "" And key <> "CC" Then v = dflt
+  End If
+  ConfStr = v
 End Function
 
 Function ConfNum(cf, key, dflt)
