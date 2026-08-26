@@ -156,7 +156,8 @@ Function HM(totalMin)
 End Function
 
 Function FmtHM(t)
-  FmtHM = Right("0" & Hour(t), 2) & ":" & Right("0" & Minute(t), 2)
+  Dim m : m = Int(CDbl(t) * 1440 + 0.5)
+  FmtHM = Right("0" & (m \ 60), 2) & ":" & Right("0" & (m Mod 60), 2)
 End Function
 
 ' セル値（時刻 or シリアル値）→ 1日を1とする小数
@@ -171,8 +172,8 @@ End Function
 Function Repl(tpl, nm, inT, limT, remainTxt, lh)
   Dim s : s = tpl
   s = Replace(s, "{name}", nm)
-  s = Replace(s, "{in}", FmtHM(CDate(inT)))
-  s = Replace(s, "{limit}", FmtHM(CDate(limT)))
+  s = Replace(s, "{in}", FmtHM(inT))
+  s = Replace(s, "{limit}", FmtHM(limT))
   s = Replace(s, "{remain}", remainTxt)
   s = Replace(s, "{hours}", CStr(lh))
   s = Replace(s, "{date}", Year(Date) & "/" & Right("0" & Month(Date), 2) & "/" & Right("0" & Day(Date), 2))
