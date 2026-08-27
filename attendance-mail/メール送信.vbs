@@ -159,7 +159,7 @@ End Function
 
 Function FmtHM(t)
   Dim m, hh, mm
-  m = Int(CDbl(t) * 1440 + 0.5)
+  m = CLng(CDbl(t) * 1440)
   hh = m \ 60
   mm = m Mod 60
   FmtHM = Right("0" & hh, 2) & ":" & Right("0" & mm, 2)
