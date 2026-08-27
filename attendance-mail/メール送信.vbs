@@ -36,6 +36,16 @@ On Error GoTo 0
 xl.Visible = False
 xl.DisplayAlerts = False
 Set wb = xl.Workbooks.Open(bookPath)
+
+'--- 読み取り専用なら中止（Excelで開いたままだと保存できない） ---
+If wb.ReadOnly Then
+  CloseAll xl, wb
+  MsgBox BOOK_NAME & " が読み取り専用で開かれました。" & vbCrLf & vbCrLf & _
+         "このファイルを Excel で開いたままにしていませんか？" & vbCrLf & _
+         "Excel を完全に閉じてから、もう一度実行してください。", vbCritical, "勤怠メール"
+  WScript.Quit 1
+End If
+
 Set ws = wb.Worksheets(SHEET_DATA)
 Set cf = wb.Worksheets(SHEET_CONF)
 Set bs = wb.Worksheets(SHEET_BODY)
@@ -76,8 +86,11 @@ On Error GoTo 0
 
 '--- 送信ループ ---
 Dim lastRow, nm, ml, inT, limT, sentV, remainMin
-Dim sentCnt, skipDup, skipPm, skipOver, errCnt, logTxt
+Dim sentCnt, skipDup, skipPm, skipOver, errCnt, logTxt, okSend, clrCnt, clrMsg
 sentCnt = 0 : skipDup = 0 : skipPm = 0 : skipOver = 0 : errCnt = 0 : logTxt = ""
+okSend = False : clrCnt = 0
+If clearIn Then clrMsg = "ON" Else clrMsg = "OFF"
+
 lastRow = ws.Cells(ws.Rows.Count, COL_MAIL).End(-4162).Row
 
 For r = 2 To lastRow
@@ -118,6 +131,7 @@ For r = 2 To lastRow
 
         On Error Resume Next
         Dim mail
+        okSend = False
         Set mail = ol.CreateItem(0)
         mail.To = ml
         If ccAll <> "" Then mail.CC = ccAll
@@ -130,23 +144,40 @@ For r = 2 To lastRow
           Err.Clear
         Else
           sentCnt = sentCnt + 1
-          ws.Cells(r, COL_SENT).Value = Date   '重複送信防止
-          If clearIn Then ws.Cells(r, COL_IN).ClearContents  '翌日の誤送信防止
           logTxt = logTxt & "  ○" & nm & " : 残り " & remainTxt & vbCrLf
+          okSend = True
         End If
         On Error GoTo 0
         Set mail = Nothing
+
+        '--- 送信できた行だけ台帳を更新（ここはエラーを隠さない） ---
+        If okSend Then
+          ws.Cells(r, COL_SENT).Value = Date          '重複送信防止
+          If clearIn Then
+            ws.Cells(r, COL_IN).ClearContents         '翌日の誤送信防止
+            clrCnt = clrCnt + 1
+          End If
+        End If
       End If
     End If
   End If
 Next
 
+On Error Resume Next
 wb.Save
+If Err.Number <> 0 Then
+  MsgBox "Excel ファイルを保存できませんでした。" & vbCrLf & _
+         "（" & Err.Description & "）" & vbCrLf & vbCrLf & _
+         "送信済み日付と打刻のクリアが反映されていません。", vbCritical, "勤怠メール"
+  Err.Clear
+End If
+On Error GoTo 0
 CloseAll xl, wb
 
 MsgBox "送信完了" & vbCrLf & vbCrLf & _
        "送信 " & sentCnt & " 件 / 送信済みスキップ " & skipDup & " 件 / 午後出勤 " & skipPm & " 件" & vbCrLf & _
-       "うち13時間超過 " & skipOver & " 件 / 失敗 " & errCnt & " 件" & vbCrLf & vbCrLf & _
+       "うち13時間超過 " & skipOver & " 件 / 失敗 " & errCnt & " 件" & vbCrLf & _
+       "打刻クリア設定: " & clrMsg & " / クリアした行 " & clrCnt & " 件" & vbCrLf & vbCrLf & _
        logTxt, vbInformation, "勤怠メール"
 
 '==================== 関数 ====================
