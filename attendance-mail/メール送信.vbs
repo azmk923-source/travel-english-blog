@@ -167,10 +167,19 @@ End Function
 
 ' セル値（時刻 or シリアル値）→ 1日を1とする小数
 Function ToTime(v)
-  If IsDate(v) Then
-    ToTime = CDbl(TimeValue(CDate(v)))
+  Dim t, p, d
+  t = Trim(CStr(v))
+  t = Replace(t, "：", ":")
+  If IsNumeric(t) Then
+    d = CDbl(t)
+    ToTime = d - Int(d)
+  ElseIf InStr(t, ":") > 0 Then
+    p = Split(t, ":")
+    ToTime = (CDbl(p(0)) * 60 + CDbl(p(1))) / 1440
+  ElseIf IsDate(t) Then
+    ToTime = CDbl(TimeValue(CDate(t)))
   Else
-    ToTime = CDbl(v) - Int(CDbl(v))
+    ToTime = -1
   End If
 End Function
 
