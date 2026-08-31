@@ -82,6 +82,8 @@ heroImage: 'https://images.unsplash.com/photo-1507941097613-9f2157b69235?w=1200&
 
 **オクトパスカード**（Suicaのような交通系ICカード）を最初に買えば、移動はほぼ自動で解決です。
 
+なお、香港は英語が通じるぶんネットの必要度が低い旅先ですが、**深圳など中国本土に渡るとGoogleマップもLINEも使えなくなります。**回線の選び方は[香港旅行のWiFi・eSIMはどれがいい？](/blog/hongkong-wifi-esim/)にまとめました。
+
 ### ホテルでよく使うフレーズ
 
 ```
@@ -158,6 +160,7 @@ NativeCampはレッスン回数無制限のオンライン英会話。何度で�
 
 ## 関連記事
 
+- [香港旅行のWiFi・eSIMはどれがいい？深圳・マカオに渡るなら選び方が変わります](/blog/hongkong-wifi-esim/)
 - [アジア旅行で使える英語フレーズ集【シーン別50選】](/blog/travel-english-phrases/)
 - [旅行英語アプリおすすめ5選【実際に使った正直レビュー】](/blog/travel-english-app/)
 - [ベトナム旅行で英語は通じる？ホーチミン・ハノイを旅した私が正直に教えます](/blog/vietnam-english/)
