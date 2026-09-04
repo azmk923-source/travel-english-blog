@@ -150,6 +150,7 @@ heroImage: 'https://images.unsplash.com/photo-1587614382346-4ec70e388b28?w=1200&
 
 ## 関連記事
 
+- [英語が話せないまま海外旅行に行っていい？結論、行けます。ただし困る場面は3つだけあります](/blog/cant-speak-english-travel/)
 - [旅行英語アプリおすすめ5選【実際に使った正直レビュー】](/blog/travel-english-app/)
 - [AI英会話スピーク(Speak)の正直レビュー【旅行英語に効く使い方と無料トライアルの始め方】](/blog/speak-app-review/)
 - [英語学習が続かない人へ。社会人が毎日続けるための3つのコツ](/blog/english-habit/)

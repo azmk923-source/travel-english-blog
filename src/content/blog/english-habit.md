@@ -133,6 +133,7 @@ NativeCampはレッスン回数無制限＆予約不要のオンライン英会�
 
 ## 関連記事
 
+- [英語が話せないまま海外旅行に行っていい？結論、行けます。ただし困る場面は3つだけあります](/blog/cant-speak-english-travel/)
 - [旅行英語アプリおすすめ5選【実際に使った正直レビュー】](/blog/travel-english-app/)
 - [旅行のためのオンライン英会話おすすめ比較【初心者向けに正直に選んだ】](/blog/online-english-comparison/)
 - [AI英会話スピーク(Speak)の正直レビュー【旅行英語に効く使い方と無料トライアルの始め方】](/blog/speak-app-review/)
