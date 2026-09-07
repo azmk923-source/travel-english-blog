@@ -96,7 +96,7 @@ AIが相手だと、この心理的ハードルがゼロになります。同じ
 
 ## 関連記事
 
-- [旅行英語アプリおすすめランキング【実際に使った正直レビュー】](/blog/travel-english-app/)
+- [旅行英語アプリおすすめ5選【実際に使った正直レビュー】](/blog/travel-english-app/)
 - [旅行のためのオンライン英会話おすすめ比較【初心者向けに正直に選んだ】](/blog/online-english-comparison/)
 - [英語学習が続かない人へ。社会人が毎日続けるための3つのコツ](/blog/english-habit/)
 - [アジア旅行で使える英語フレーズ集【シーン別50選】](/blog/travel-english-phrases/)
