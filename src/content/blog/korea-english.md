@@ -257,6 +257,8 @@ Naverが開発した韓国語↔日本語・英語の翻訳アプリ。Googleよ
 
 ## 関連記事
 
+- [台北で英語は通じる？ネットで評価が割れる理由と、場所別の本当の通じ具合](/blog/taipei-english/)
+
 - [釜山で英語は通じる？日本語は？通じる場所と通じない場所を正直にまとめました](/blog/busan-english/)
 - [英語が話せないまま海外旅行に行っていい？結論、行けます。ただし困る場面は3つだけあります](/blog/cant-speak-english-travel/)
 - [韓国旅行のWiFi・eSIMはどれがいい？Googleマップが使えない国の正直な選び方](/blog/korea-wifi-esim/)
