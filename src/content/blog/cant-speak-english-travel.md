@@ -194,3 +194,4 @@ heroImage: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200&
 - [海外タクシーでぼったくられない！旅行者が使う英語フレーズ完全ガイド](/blog/taxi-english/)
 - [英語学習が続かない人へ。社会人が毎日続けるための3つのコツ](/blog/english-habit/)
 - [保安検査で止められたときの英語｜聞かれることは3つだけです](/blog/airport-security-english/)
+- [バンコクで英語は通じる？問題は「通じるか」より「聞き取れるか」でした](/blog/bangkok-english/)

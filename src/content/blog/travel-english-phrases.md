@@ -250,3 +250,4 @@ NativeCampは回数無制限で受けられるオンライン英会話で、上�
 - [海外旅行のネット環境どうする？WiFiレンタル・eSIM・SIMを初心者向けに比較](/blog/overseas-internet/)
 - [保安検査で止められたときの英語｜聞かれることは3つだけです](/blog/airport-security-english/)
 - [台北で英語は通じる？ネットで評価が割れる理由と、場所別の本当の通じ具合](/blog/taipei-english/)
+- [バンコクで英語は通じる？問題は「通じるか」より「聞き取れるか」でした](/blog/bangkok-english/)

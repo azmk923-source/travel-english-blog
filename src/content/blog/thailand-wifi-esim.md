@@ -213,6 +213,7 @@ Grabはカード払いにできますが、**屋台やローカル食堂は現�
 ## 関連記事
 
 - [タイ旅行で英語は通じる？バンコク・チェンマイを旅した私が正直に教えます](/blog/thailand-english/)
+- [バンコクで英語は通じる？問題は「通じるか」より「聞き取れるか」でした](/blog/bangkok-english/)
 - [海外旅行のネット環境どうする？WiFiレンタル・eSIM・SIMを初心者向けに比較](/blog/overseas-internet/)
 - [韓国旅行のWiFi・eSIMはどれがいい？Googleマップが使えない国の正直な選び方](/blog/korea-wifi-esim/)
 - [台湾旅行のWiFi・eSIMはどれがいい？台湾リピーターが正直に比較](/blog/taiwan-wifi-esim/)
