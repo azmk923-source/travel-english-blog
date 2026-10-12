@@ -193,6 +193,6 @@ Grabアプリ（東南アジア版Uber）を使えば目的地入力はアプリ
 - [バンコクで英語は通じる？問題は「通じるか」より「聞き取れるか」でした](/blog/bangkok-english/)
 - [台湾旅行で英語は通じる？台湾リピーターの私が正直に教えます](/blog/taiwan-english/)
 - [台北で英語は通じる？ネットで評価が割れる理由と、場所別の本当の通じ具合](/blog/taipei-english/)
-- [ベトナム旅行で英語は通じる？ホーチミン・ハノイを旅した私が正直に教えます](/blog/vietnam-english/)
+- [ベトナム旅行で英語は通じる？ハノイを旅した私が都市別に正直にまとめました](/blog/vietnam-english/)
 - [海外旅行のネット環境どうする？WiFiレンタル・eSIM・SIMを初心者向けに比較](/blog/overseas-internet/)
 - [タイ旅行のWiFi・eSIMはどれがいい？Grabが命綱になる国の正直な選び方](/blog/thailand-wifi-esim/)

@@ -157,12 +157,13 @@ Googleマップを開いて「なぜこのルートを走っているのか」�
 
 ## 関連記事
 
+- [ハノイで英語は通じる？弾丸旅行で英語ツアーに参加して、最後に「Get off」でやらかした話](/blog/hanoi-english/)
 - [旅行のためのオンライン英会話おすすめ比較【初心者向けに正直に選んだ】](/blog/online-english-comparison/)
 - [アジア旅行で使える英語フレーズ集【シーン別50選】](/blog/travel-english-phrases/)
 - [海外旅行のネット環境どうする？WiFiレンタル・eSIM・SIMを初心者向けに比較](/blog/overseas-internet/)
 - [タイ旅行で英語は通じる？バンコク・チェンマイを旅した私が正直に教えます](/blog/thailand-english/)
 - [台湾旅行で英語は通じる？台湾リピーターの私が正直に教えます](/blog/taiwan-english/)
-- [ベトナム旅行で英語は通じる？ホーチミン・ハノイを旅した私が正直に教えます](/blog/vietnam-english/)
+- [ベトナム旅行で英語は通じる？ハノイを旅した私が都市別に正直にまとめました](/blog/vietnam-english/)
 - [香港旅行で英語は通じる？実際に旅した私が正直に教えます](/blog/hongkong-english/)
 - [韓国旅行で英語は通じる？日本語は？結局どっちで話しかけるべきかを正直にまとめました](/blog/korea-english/)
 - [保安検査で止められたときの英語｜聞かれることは3つだけです](/blog/airport-security-english/)

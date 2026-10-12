@@ -210,7 +210,8 @@ Grabはカード払いにできますが、**路上フォーやローカル食�
 
 ## 関連記事
 
-- [ベトナム旅行で英語は通じる？ホーチミン・ハノイを旅した私が正直に教えます](/blog/vietnam-english/)
+- [ハノイで英語は通じる？弾丸旅行で英語ツアーに参加して、最後に「Get off」でやらかした話](/blog/hanoi-english/)
+- [ベトナム旅行で英語は通じる？ハノイを旅した私が都市別に正直にまとめました](/blog/vietnam-english/)
 - [海外旅行のネット環境どうする？WiFiレンタル・eSIM・SIMを初心者向けに比較](/blog/overseas-internet/)
 - [タイ旅行のWiFi・eSIMはどれがいい？Grabが命綱になる国の正直な選び方](/blog/thailand-wifi-esim/)
 - [台湾旅行のWiFi・eSIMはどれがいい？台湾リピーターが正直に比較](/blog/taiwan-wifi-esim/)

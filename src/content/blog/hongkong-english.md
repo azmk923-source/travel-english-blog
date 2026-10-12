@@ -163,6 +163,6 @@ NativeCampはレッスン回数無制限のオンライン英会話。何度で�
 - [香港旅行のWiFi・eSIMはどれがいい？深圳・マカオに渡るなら選び方が変わります](/blog/hongkong-wifi-esim/)
 - [アジア旅行で使える英語フレーズ集【シーン別50選】](/blog/travel-english-phrases/)
 - [旅行英語アプリおすすめ5選【実際に使った正直レビュー】](/blog/travel-english-app/)
-- [ベトナム旅行で英語は通じる？ホーチミン・ハノイを旅した私が正直に教えます](/blog/vietnam-english/)
+- [ベトナム旅行で英語は通じる？ハノイを旅した私が都市別に正直にまとめました](/blog/vietnam-english/)
 - [台北で英語は通じる？ネットで評価が割れる理由と、場所別の本当の通じ具合](/blog/taipei-english/)
 - [韓国旅行で英語は通じる？日本語は？結局どっちで話しかけるべきかを正直にまとめました](/blog/korea-english/)
