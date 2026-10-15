@@ -226,7 +226,7 @@ MRT　：Two tickets to Taipei 101, please.
 ## 関連記事
 
 - [ハノイで英語は通じる？弾丸旅行で英語ツアーに参加して、最後に「Get off」でやらかした話](/blog/hanoi-english/)
-- [台湾旅行で英語は通じる？台湾リピーターの私が正直に教えます](/blog/taiwan-english/)
+- [台湾で英語は通じる？台北・台南・高雄を歩いた私の答えは「場所しだい」でした](/blog/taiwan-english/)
 - [台湾旅行のWiFi・eSIMはどれがいい？台湾リピーターが正直に比較](/blog/taiwan-wifi-esim/)
 - [バンコクで英語は通じる？問題は「通じるか」より「聞き取れるか」でした](/blog/bangkok-english/)
 - [英語が話せないまま海外旅行に行っていい？結論、行けます。ただし困る場面は3つだけあります](/blog/cant-speak-english-travel/)

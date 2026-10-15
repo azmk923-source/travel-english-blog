@@ -209,7 +209,7 @@ MRTやバスで使う悠遊カード（EasyCard）、レストランの予約、
 - [台北で英語は通じる？ネットで評価が割れる理由と、場所別の本当の通じ具合](/blog/taipei-english/)
 
 - [海外旅行のネット環境どうする？WiFiレンタル・eSIM・SIMを初心者向けに比較](/blog/overseas-internet/)
-- [台湾旅行で英語は通じる？台湾リピーターの私が正直に教えます](/blog/taiwan-english/)
+- [台湾で英語は通じる？台北・台南・高雄を歩いた私の答えは「場所しだい」でした](/blog/taiwan-english/)
 - [旅行のためのオンライン英会話おすすめ比較【初心者向けに正直に選んだ】](/blog/online-english-comparison/)
 - [アジア旅行で使える英語フレーズ集【シーン別50選】](/blog/travel-english-phrases/)
 - [海外タクシーでぼったくられない！旅行者が使う英語フレーズ完全ガイド](/blog/taxi-english/)

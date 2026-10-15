@@ -162,7 +162,7 @@ Googleマップを開いて「なぜこのルートを走っているのか」�
 - [アジア旅行で使える英語フレーズ集【シーン別50選】](/blog/travel-english-phrases/)
 - [海外旅行のネット環境どうする？WiFiレンタル・eSIM・SIMを初心者向けに比較](/blog/overseas-internet/)
 - [タイ旅行で英語は通じる？バンコク・チェンマイを旅した私が正直に教えます](/blog/thailand-english/)
-- [台湾旅行で英語は通じる？台湾リピーターの私が正直に教えます](/blog/taiwan-english/)
+- [台湾で英語は通じる？台北・台南・高雄を歩いた私の答えは「場所しだい」でした](/blog/taiwan-english/)
 - [ベトナム旅行で英語は通じる？ハノイを旅した私が都市別に正直にまとめました](/blog/vietnam-english/)
 - [香港旅行で英語は通じる？実際に旅した私が正直に教えます](/blog/hongkong-english/)
 - [韓国旅行で英語は通じる？日本語は？結局どっちで話しかけるべきかを正直にまとめました](/blog/korea-english/)
