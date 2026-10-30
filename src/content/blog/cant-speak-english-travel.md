@@ -187,7 +187,7 @@ heroImage: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200&
 ## 関連記事
 
 - [ハノイで英語は通じる？弾丸旅行で英語ツアーに参加して、最後に「Get off」でやらかした話](/blog/hanoi-english/)
-- [台北で英語は通じる？ネットで評価が割れる理由と、場所別の本当の通じ具合](/blog/taipei-english/)
+- [台北で英語は通じる？九份への電車で「フォール」を聞き間違えた私が、場所別に答えます](/blog/taipei-english/)
 
 - [アジア旅行で使える英語フレーズ集【シーン別50選】](/blog/travel-english-phrases/)
 - [海外旅行のネット環境どうする？WiFiレンタル・eSIM・SIMを初心者向けに比較](/blog/overseas-internet/)
