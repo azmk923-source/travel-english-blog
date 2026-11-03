@@ -163,7 +163,7 @@ Googleマップを開いて「なぜこのルートを走っているのか」�
 - [旅行のためのオンライン英会話おすすめ比較【初心者向けに正直に選んだ】](/blog/online-english-comparison/)
 - [アジア旅行で使える英語フレーズ集【シーン別50選】](/blog/travel-english-phrases/)
 - [海外旅行のネット環境どうする？WiFiレンタル・eSIM・SIMを初心者向けに比較](/blog/overseas-internet/)
-- [タイ旅行で英語は通じる？バンコク・チェンマイを旅した私が正直に教えます](/blog/thailand-english/)
+- [タイ旅行で英語は通じる？バンコクを旅した私が正直に教えます](/blog/thailand-english/)
 - [台湾で英語は通じる？台北・台南・高雄を歩いた私の答えは「場所しだい」でした](/blog/taiwan-english/)
 - [ベトナム旅行で英語は通じる？ハノイを旅した私が都市別に正直にまとめました](/blog/vietnam-english/)
 - [香港旅行で英語は通じる？実際に旅した私が正直に教えます](/blog/hongkong-english/)
