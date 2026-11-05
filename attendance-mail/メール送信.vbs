@@ -227,6 +227,7 @@ Function Repl(tpl, nm, inT, limT, remainTxt, lh)
   s = Replace(s, "{limit}", limT)
   s = Replace(s, "{remain}", remainTxt)
   s = Replace(s, "{hours}", CStr(lh))
+  s = Replace(s, "{now}", FmtHM(CDbl(TimeValue(Now))))
   s = Replace(s, "{date}", Year(Date) & "/" & Right("0" & Month(Date), 2) & "/" & Right("0" & Day(Date), 2))
   Repl = s
 End Function
