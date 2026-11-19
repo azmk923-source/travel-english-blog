@@ -238,5 +238,5 @@ I'm sorry, I don't speak English well.
 - [海外航空券を安く取る7つのコツ【アジア旅行リピーターの正直な予約手順】](/blog/overseas-flight-tips/)
 - [海外タクシーでぼったくられない！旅行者が使う英語フレーズ完全ガイド](/blog/taxi-english/)
 - [海外旅行のネット環境どうする？WiFiレンタル・eSIM・SIMを初心者向けに比較](/blog/overseas-internet/)
-- [台北で英語は通じる？九份への電車で「フォール」を聞き間違えた私が、場所別に答えます](/blog/taipei-english/)
+- [台北で英語は通じる？九份行きの電車で「fall（滝）」を数字の4と聞き間違えた私のエリア別まとめ](/blog/taipei-english/)
 - [バンコクで英語は通じる？問題は「通じるか」より「聞き取れるか」でした](/blog/bangkok-english/)

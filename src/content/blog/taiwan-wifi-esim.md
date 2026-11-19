@@ -208,10 +208,10 @@ MRTやバスで使う悠遊カード（EasyCard）、レストランの予約、
 
 ## 関連記事
 
-- [台北で英語は通じる？九份への電車で「フォール」を聞き間違えた私が、場所別に答えます](/blog/taipei-english/)
+- [台北で英語は通じる？九份行きの電車で「fall（滝）」を数字の4と聞き間違えた私のエリア別まとめ](/blog/taipei-english/)
 
 - [海外旅行のネット環境どうする？WiFiレンタル・eSIM・SIMを初心者向けに比較](/blog/overseas-internet/)
-- [台湾で英語は通じる？台北・台南・高雄を歩いた私の答えは「場所しだい」でした](/blog/taiwan-english/)
+- [台湾で英語は通じる？高雄では逆に中国語で道を聞かれた私が、地域別に答えます](/blog/taiwan-english/)
 - [旅行のためのオンライン英会話おすすめ比較【初心者向けに正直に選んだ】](/blog/online-english-comparison/)
 - [アジア旅行で使える英語フレーズ集【シーン別50選】](/blog/travel-english-phrases/)
 - [海外タクシーでぼったくられない！旅行者が使う英語フレーズ完全ガイド](/blog/taxi-english/)

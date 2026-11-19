@@ -206,7 +206,7 @@ eSIMは、**SIMカードを差し替えずにスマホの中で回線を追加�
 
 ## 関連記事
 
-- [韓国旅行で英語は通じる？日本語は？結局どっちで話しかけるべきかを正直にまとめました](/blog/korea-english/)
+- [韓国旅行で英語は通じる？日本語は？「日本語で話しかけてくる人」に注意したい理由までまとめました](/blog/korea-english/)
 - [海外旅行のネット環境どうする?WiFiレンタル・eSIM・SIMを初心者向けに比較](/blog/overseas-internet/)
 - [台湾旅行のWiFi・eSIMはどれがいい?台湾リピーターが正直に比較](/blog/taiwan-wifi-esim/)
 - [旅行のためのオンライン英会話おすすめ比較【初心者向けに正直に選んだ】](/blog/online-english-comparison/)

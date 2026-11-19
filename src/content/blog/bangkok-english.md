@@ -217,15 +217,15 @@ I'm sorry, I don't speak English well.
 - 屋台で通じないのは当たり前。指差しと `Not spicy` で足りる
 
 タイ全体の英語事情や、チェンマイ・パタヤについてはこちらにまとめています。
-→ [タイ旅行で英語は通じる？バンコクを旅した私が正直に教えます](/blog/thailand-english/)
+→ [タイ旅行で英語は通じる？バンコクの食堂で英語が通じず、指差しで乗り切った私の答え](/blog/thailand-english/)
 
 ---
 
 ## 関連記事
 
 - [ハノイで英語は通じる？弾丸旅行で英語ツアーに参加して、最後に「Get off」でやらかした話](/blog/hanoi-english/)
-- [タイ旅行で英語は通じる？バンコクを旅した私が正直に教えます](/blog/thailand-english/)
+- [タイ旅行で英語は通じる？バンコクの食堂で英語が通じず、指差しで乗り切った私の答え](/blog/thailand-english/)
 - [タイ旅行のWiFi・eSIMはどれがいい？Grabが命綱になる国の正直な選び方](/blog/thailand-wifi-esim/)
-- [台北で英語は通じる？九份への電車で「フォール」を聞き間違えた私が、場所別に答えます](/blog/taipei-english/)
+- [台北で英語は通じる？九份行きの電車で「fall（滝）」を数字の4と聞き間違えた私のエリア別まとめ](/blog/taipei-english/)
 - [英語が話せないまま海外旅行に行っていい？結論、行けます。ただし困る場面は3つだけあります](/blog/cant-speak-english-travel/)
 - [アジア旅行で使える英語フレーズ集【シーン別50選】](/blog/travel-english-phrases/)

@@ -149,5 +149,5 @@ eSIMは、**SIMカードを差し替えずにスマホの中で回線を切り�
 - [旅行のためのオンライン英会話おすすめ比較【初心者向けに正直に選んだ】](/blog/online-english-comparison/)
 - [旅行英語アプリおすすめ5選【実際に使った正直レビュー】](/blog/travel-english-app/)
 - [アジア旅行で使える英語フレーズ集【シーン別50選】](/blog/travel-english-phrases/)
-- [タイ旅行で英語は通じる？バンコクを旅した私が正直に教えます](/blog/thailand-english/)
-- [ベトナム旅行で英語は通じる？ハノイを旅した私が都市別に正直にまとめました](/blog/vietnam-english/)
+- [タイ旅行で英語は通じる？バンコクの食堂で英語が通じず、指差しで乗り切った私の答え](/blog/thailand-english/)
+- [ベトナム旅行で英語は通じる？ハノイの市場は数字と指差しで乗り切った私が都市別に答えます](/blog/vietnam-english/)
