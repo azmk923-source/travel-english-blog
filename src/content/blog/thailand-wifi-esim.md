@@ -112,7 +112,7 @@ WiFiレンタル・eSIM・現地SIMの違いそのものは、[海外旅行の�
 
 👉 [グローバルモバイルでタイ旅行のWiFiを予約する](https://px.a8.net/svt/ejp?a8mat=4B61WF+7118VM+2ZBM+3H18R6)
 
-<!-- 広告枠：GLOBAL WiFi（レントラックス・提携中）。リンク取得後、この下に追加 -->
+👉 [GLOBAL WiFiでタイ旅行のWiFiを予約する](https://www.rentracks.jp/adx/r.html?idx=0.76304.392777.929.1548&dna=23833)
 
 ---
 

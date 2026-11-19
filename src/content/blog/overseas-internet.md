@@ -60,7 +60,7 @@ heroImage: 'https://images.unsplash.com/photo-1499591934245-40b55745b905?w=1200&
 
 👉 [グローバルモバイルで海外WiFiを予約する](https://px.a8.net/svt/ejp?a8mat=4B61WF+7118VM+2ZBM+3H18R6)
 
-<!-- 広告枠：GLOBAL WiFi（レントラックス・提携中）。リンク取得後、この下に追加 -->
+👉 [GLOBAL WiFiで海外WiFiを予約する](https://www.rentracks.jp/adx/r.html?idx=0.76304.392777.929.1548&dna=23833)
 
 ---
 
@@ -76,7 +76,9 @@ eSIMは、**SIMカードを差し替えずにスマホの中で回線を切り�
 「スマホの設定くらい余裕」という人には、身軽で便利な選択肢です。逆に「設定と聞くと不安」という人は、無理せずWiFiレンタルが安心です。
 
 
-<!-- 広告枠：Airalo（レントラックス・提携申請中）／DHA SIM（提携中）。この上に追加 -->
+👉 [DHA SIMで海外旅行のeSIMを探す](https://www.rentracks.jp/adx/r.html?idx=0.76304.392777.10578.15146&dna=172679)
+
+<!-- 広告枠：Airalo（レントラックス・提携申請中）。承認後、この下に追加 -->
 
 ---
 
